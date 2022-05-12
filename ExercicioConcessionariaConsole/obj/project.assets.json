@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Carla\\Desktop\\ExercicioConcessionaria\\ExercicioConcessionariaConsole\\ExercicioConcessionaria.csproj",
+      "projectUniqueName": "C:\\Users\\Carla\\Desktop\\Curso\\ExercicioConcessionaria\\ExercicioConcessionariaConsole\\ExercicioConcessionaria.csproj",
       "projectName": "ExercicioConcessionaria",
-      "projectPath": "C:\\Users\\Carla\\Desktop\\ExercicioConcessionaria\\ExercicioConcessionariaConsole\\ExercicioConcessionaria.csproj",
+      "projectPath": "C:\\Users\\Carla\\Desktop\\Curso\\ExercicioConcessionaria\\ExercicioConcessionariaConsole\\ExercicioConcessionaria.csproj",
       "packagesPath": "C:\\Users\\Carla\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Carla\\Desktop\\ExercicioConcessionaria\\ExercicioConcessionariaConsole\\obj\\",
+      "outputPath": "C:\\Users\\Carla\\Desktop\\Curso\\ExercicioConcessionaria\\ExercicioConcessionariaConsole\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Carla\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -3,8 +3,8 @@ namespace ExercicioConcessionaria.Models
 {
     public class Carro : Veiculo
     {
-        private bool TransmissaoAutomatica { get; set; }
-        private string Combustivel { get; set; }
+        public bool TransmissaoAutomatica { get; set; }
+        public string Combustivel { get; set; }
 
         public override double CalcularValor(double valor)
         {

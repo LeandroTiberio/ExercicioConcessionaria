@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NYBJ9hbEMekyuKcEDGiH43HZ1M9TRXsZsfdGNI32Ir+XhE0bvePk6UHPqI+tC8ryu1mS5UKkP86h2uqBWxCi3g==",
+  "dgSpecHash": "ptAktjAfoVfbpn2rcjkQXFObzhsWddnP4KtL2uJmCA6JVZU2egdBXimUZngBfX77FbwcyxjKnvOtzh1VmcG2lQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Carla\\Desktop\\ExercicioConcessionaria\\ExercicioConcessionaria.Teste\\ExercicioConcessionaria.Teste.csproj",
+  "projectFilePath": "C:\\Users\\Carla\\Desktop\\Curso\\ExercicioConcessionaria\\ExercicioConcessionaria.Teste\\ExercicioConcessionaria.Teste.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Carla\\.nuget\\packages\\coverlet.collector\\3.1.0\\coverlet.collector.3.1.0.nupkg.sha512",
     "C:\\Users\\Carla\\.nuget\\packages\\microsoft.codecoverage\\16.11.0\\microsoft.codecoverage.16.11.0.nupkg.sha512",

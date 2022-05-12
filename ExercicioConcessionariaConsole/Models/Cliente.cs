@@ -3,8 +3,8 @@ namespace ExercicioConcessionaria.Models
 {
     public class Cliente : Pessoa
     {
-        private string Email { get; set; }
-        private string Telefone { get; set; }
+        public string Email { get; set; }
+        public string Telefone { get; set; }
 
         public Cliente ( string nome, string cpf, DateTime dataNascimento, string email, string telefone) 
                         : base ( nome, cpf, dataNascimento)

@@ -5994,11 +5994,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Carla\\Desktop\\ExercicioConcessionaria\\ExercicioConcessionaria.Teste\\ExercicioConcessionaria.Teste.csproj",
+      "projectUniqueName": "C:\\Users\\Carla\\Desktop\\Curso\\ExercicioConcessionaria\\ExercicioConcessionaria.Teste\\ExercicioConcessionaria.Teste.csproj",
       "projectName": "ExercicioConcessionaria.Teste",
-      "projectPath": "C:\\Users\\Carla\\Desktop\\ExercicioConcessionaria\\ExercicioConcessionaria.Teste\\ExercicioConcessionaria.Teste.csproj",
+      "projectPath": "C:\\Users\\Carla\\Desktop\\Curso\\ExercicioConcessionaria\\ExercicioConcessionaria.Teste\\ExercicioConcessionaria.Teste.csproj",
       "packagesPath": "C:\\Users\\Carla\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Carla\\Desktop\\ExercicioConcessionaria\\ExercicioConcessionaria.Teste\\obj\\",
+      "outputPath": "C:\\Users\\Carla\\Desktop\\Curso\\ExercicioConcessionaria\\ExercicioConcessionaria.Teste\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Carla\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -6013,8 +6013,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Carla\\Desktop\\ExercicioConcessionaria\\ExercicioConcessionariaConsole\\ExercicioConcessionaria.csproj": {
-              "projectPath": "C:\\Users\\Carla\\Desktop\\ExercicioConcessionaria\\ExercicioConcessionariaConsole\\ExercicioConcessionaria.csproj"
+            "C:\\Users\\Carla\\Desktop\\Curso\\ExercicioConcessionaria\\ExercicioConcessionariaConsole\\ExercicioConcessionaria.csproj": {
+              "projectPath": "C:\\Users\\Carla\\Desktop\\Curso\\ExercicioConcessionaria\\ExercicioConcessionariaConsole\\ExercicioConcessionaria.csproj"
             }
           }
         }
