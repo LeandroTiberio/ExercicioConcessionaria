@@ -3,7 +3,7 @@ namespace ExercicioConcessionaria.Models
 {
     public class Funcionario : Pessoa
     {
-         private string Cargo { get; set; }
+         public string Cargo { get; set; }
 
         public Funcionario (string nome, string cpf, DateTime DataNascimento, string cargo) 
                             : base (nome, cpf, DataNascimento)

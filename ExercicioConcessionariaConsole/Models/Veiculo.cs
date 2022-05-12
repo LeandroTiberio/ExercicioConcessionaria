@@ -3,12 +3,12 @@ namespace ExercicioConcessionaria.Models
 {
     public class Veiculo
     {
-        private string Marca { get; set; }
-        private string Modelo { get; set; }
-        private DateTime Ano { get; set; }
-        private int Kilometragem { get; set; }
-        private string Cor { get; set; }
-        private double Valor { get; set; }
+        public string Marca { get; set; }
+        public string Modelo { get; set; }
+        public DateTime Ano { get; set; }
+        public int Kilometragem { get; set; }
+        public string Cor { get; set; }
+        public double Valor { get; set; }
         public virtual double CalcularValor(double valor)
         {
             return valor;

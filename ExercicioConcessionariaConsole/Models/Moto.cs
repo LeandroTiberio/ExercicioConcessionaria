@@ -3,8 +3,8 @@ namespace ExercicioConcessionaria.Models
 {
     public class Moto : Veiculo
     {
-        private int Cilindrada { get; set; }
-        private string Partida { get; set; }
+        public int Cilindrada { get; set; }
+        public string Partida { get; set; }
 
         public override double CalcularValor(double valor)
         {

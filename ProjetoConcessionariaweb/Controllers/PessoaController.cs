@@ -19,6 +19,11 @@ namespace ProjetoConcessionariaweb.Controllers
         {
             return Ok(PessoaDaClasse);
         }
-            
+        [HttpDelete]
+        public IActionResult DeletePessoaDaClasse(Pessoa Pessoa)
+        {
+            PessoaDaClasse.Remove(Pessoa);
+            return Ok(PessoaDaClasse);
+        }            
     }
 }

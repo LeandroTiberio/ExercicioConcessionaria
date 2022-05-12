@@ -7,16 +7,26 @@ namespace ProjetoConcessionariaweb.Controllers
     public class ClienteController : ControllerBase
     {
         public List<Cliente> Clientes {get; set;} = new List<Cliente>();
-    }
-    [HttpPost]
-    public IActionResult SetCliente(Cliente cliente)
-    {
-        Clientes.Add(cliente);
-        return Ok (Clientes);
-    }
-    [HttpGet()]
-    public IActionResult GetClientes()
-    {
-        return Ok (Clientes);
+    
+        [HttpPost]
+        public IActionResult SetCliente(Cliente cliente)
+        {
+            Clientes.Add(cliente);
+            return Ok(Clientes);
+        }
+   
+        [HttpGet()]
+        public IActionResult GetClientes()
+        {
+            return Ok(Clientes);
+        }
+        [HttpDelete]
+        public IActionResult DeleteCliente(Cliente cliente)
+        {    
+           Clientes.Remove(cliente);
+           return Ok(Clientes);
+        }
     }
 }
+
+
