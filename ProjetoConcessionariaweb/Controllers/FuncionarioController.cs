@@ -6,7 +6,7 @@ namespace ProjetoConcessionariaweb.Controllers
     [Route("[controller]")]
     public class FuncionarioController : ControllerBase
     {
-        public List<Funcionario> Funcionarios {get; set;} = new List<Funcionario>();
+        public static List<Funcionario> Funcionarios {get; set;} = new List<Funcionario>();
 
         [HttpPost]
         public IActionResult SetFuncionario(Funcionario funcionario)

@@ -6,7 +6,7 @@ namespace ProjetoConcessionariaweb.Controllers
     [Route("[controller]")]
     public class VendaController : ControllerBase
     {
-        public List<Venda> Vendas {get; set;} = new List<Venda>();
+        public static List<Venda> Vendas {get; set;} = new List<Venda>();
 
         [HttpPost]
         public IActionResult SetVenda(Venda venda)

@@ -6,7 +6,7 @@ namespace ProjetoConcessionariaweb.Controllers
     [Route("[controller]")]
     public class ConcessionariaController : ControllerBase
     {
-        public List<Pessoa> PessoaDaClasse {get; set;} = new List<Pessoa>();
+        public static List<Pessoa> PessoaDaClasse {get; set;} = new List<Pessoa>();
         [HttpPost]
         public IActionResult SetPessoaPadrao(Pessoa pessoa)
         {
@@ -22,6 +22,7 @@ namespace ProjetoConcessionariaweb.Controllers
         [HttpDelete]
         public IActionResult DeletePessoaDaClasse(Pessoa Pessoa)
         {
+            
             PessoaDaClasse.Remove(Pessoa);
             return Ok(PessoaDaClasse);
         }            

@@ -6,7 +6,7 @@ namespace ProjetoConcessionariaweb.Controllers
     [Route("[controller]")]
     public class CarroController : ControllerBase
     {
-        public List<Carro> Carros {get; set;} = new List<Carro>();
+        public static List<Carro> Carros {get; set;} = new List<Carro>();
         
         [HttpPost]
         public IActionResult SetCarro(Carro carro)
@@ -22,8 +22,9 @@ namespace ProjetoConcessionariaweb.Controllers
        [HttpDelete]
        public IActionResult DeleteCarro(Carro carro)
        {
-           Carros.Remove(carro);
-           return Ok();
+           var CountCarros = Carros.Count<Carro>();
+           Carros.RemoveAt(CountCarros -1);
+           return Ok(carro);
        }
 
     }

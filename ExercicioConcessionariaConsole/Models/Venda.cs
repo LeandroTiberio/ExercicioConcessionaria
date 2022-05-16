@@ -65,7 +65,7 @@ namespace ExercicioConcessionaria.Models
         {
             ValorFinal = valorfinal;
         }
-        public void AplicarDesconto(double desconto)
+       public void AplicarDesconto(double desconto)
         {
             if (Vendedor.GetCargo()== "Gerente")
             {

@@ -6,7 +6,7 @@ namespace ProjetoConcessionariaweb.Controllers
     [Route("[controller]")]
     public class ClienteController : ControllerBase
     {
-        public List<Cliente> Clientes {get; set;} = new List<Cliente>();
+        public static List<Cliente> Clientes {get; set;} = new List<Cliente>();
     
         [HttpPost]
         public IActionResult SetCliente(Cliente cliente)

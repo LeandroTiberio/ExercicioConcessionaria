@@ -1,4 +1,5 @@
 using System;
+using ExercicioConcessionaria.Exceptions;
 namespace ExercicioConcessionaria.Models
 {
     public class Veiculo
@@ -50,7 +51,24 @@ namespace ExercicioConcessionaria.Models
         }
         public void SetAno(DateTime ano)
         {
-            Ano = ano;
+           Ano = ano;
+        }
+        public void SetAno(string ano)
+        {
+            var data = DateTime.Parse(ano);
+            if(data.Year < 2004)
+            {
+                throw new InputInvalidoException("Ano não pode ser menor que 2004");
+            }
+            Ano = data;
+        }
+        public bool ValidarAno(DateTime ano)
+        {
+            if (ano > DateTime.Parse("01/01/2004") && ano < DateTime.Now)
+            {
+                return true;
+            }
+            return false;
         }
 
         //Get e Set Kilometragem

@@ -49,5 +49,13 @@ namespace ExercicioConcessionaria.Models
                 return;
             }
         }
+         public bool ValidarValorMoto(double valorfinal)
+        {
+            if (valorfinal > 2000)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

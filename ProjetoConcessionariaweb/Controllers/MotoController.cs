@@ -6,7 +6,7 @@ namespace ProjetoConcessionariaweb.Controllers
     [Route("[controller]")]
     public class MotoController : ControllerBase
     {
-        public List<Moto> Motos {get; set;} = new List<Moto>();
+        public static List<Moto> Motos {get; set;} = new List<Moto>();
 
         [HttpPost]
         public IActionResult SetMoto(Moto moto)

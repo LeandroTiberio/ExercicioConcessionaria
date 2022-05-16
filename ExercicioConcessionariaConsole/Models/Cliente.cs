@@ -24,11 +24,27 @@ namespace ExercicioConcessionaria.Models
         {
             return Telefone;
         }
+        public bool ValidarEmail(string email)
+        {
+            if (email.Contains("@"))
+            {
+                return true;
+            }
+            return false;
+            
+        }
         public void SetTelefone (string telefone)
         {
            Telefone = telefone;
         }
-        
+        public bool ValidarTelefone(string telefone)
+        {
+            if(telefone.Length > 8 && telefone.Length < 15)
+            {
+                return true;
+            }
+            return false;
+        }
         
         
     }

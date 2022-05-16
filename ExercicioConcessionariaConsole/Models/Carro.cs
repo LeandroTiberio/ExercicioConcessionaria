@@ -36,7 +36,15 @@ namespace ExercicioConcessionaria.Models
         {
             Combustivel = combustivel;
         }
-        
+         
+        public bool ValidarValorCarro(double valorfinal)
+        {
+            if (valorfinal > 5000)
+            {
+                return true;
+            }
+            return false;
+        }
 
         
         
