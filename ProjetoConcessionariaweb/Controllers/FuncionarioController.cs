@@ -1,28 +1,40 @@
 using Microsoft.AspNetCore.Mvc;
 using ExercicioConcessionaria.Models;
+using ProjetoConcessionariaweb.DTOs;
+
 namespace ProjetoConcessionariaweb.Controllers
 {
     [ApiController]
     [Route("[controller]")]
     public class FuncionarioController : ControllerBase
     {
-        public static List<Funcionario> Funcionarios {get; set;} = new List<Funcionario>();
+        public static List<FuncionarioDTO> Funcionarios {get; set;} = new List<FuncionarioDTO>();
 
-        [HttpPost]
-        public IActionResult SetFuncionario(Funcionario funcionario)
+        [HttpPost("SetFuncionario")]
+        public IActionResult SetFuncionario(FuncionarioDTO funcionarioDto)
         {
-            Funcionarios.Add(funcionario);
-            return Ok(Funcionarios);
+            try
+            {
+                var funcionario = new Funcionario(funcionarioDto.Nome, funcionarioDto.Cpf, 
+                funcionarioDto.DataNascimento, funcionarioDto.Cargo );
+                Funcionarios.Add(funcionarioDto);
+                return Ok(Funcionarios);
+            }
+            catch (System.Exception ex)
+            {
+                return BadRequest (ex.Message);
+            }
         }
-        [HttpGet()]
+        [HttpGet("GetFuncionario")]
         public IActionResult GetFuncionarios()
         {
             return Ok(Funcionarios);
         }
         [HttpDelete]
-        public IActionResult DeleteCliente(Funcionario funcionario)
-        {    
-           Funcionarios.Remove(funcionario);
+        public IActionResult DeleteCliente()
+        { 
+           var index = Funcionarios.Count<FuncionarioDTO>();    
+           Funcionarios.RemoveAt(index -1);
            return Ok(Funcionarios);
         }
     }

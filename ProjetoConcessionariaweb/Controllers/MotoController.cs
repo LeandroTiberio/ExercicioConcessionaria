@@ -1,28 +1,39 @@
 using Microsoft.AspNetCore.Mvc;
 using ExercicioConcessionaria.Models;
+using ProjetoConcessionariaweb.DTOs;
 namespace ProjetoConcessionariaweb.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class MotoController : ControllerBase
+    public class MotoController : ControllerBase 
     {
-        public static List<Moto> Motos {get; set;} = new List<Moto>();
+        public static List<MotoDTO> Motos {get; set;} = new List<MotoDTO>();
 
-        [HttpPost]
-        public IActionResult SetMoto(Moto moto)
+        [HttpPost("SetMoto")]
+        public IActionResult SetMoto(MotoDTO motoDto)
         {
-            Motos.Add(moto);
-            return Ok(Motos);
+            try
+            {   var moto = new Moto(motoDto.Marca, motoDto.Modelo, motoDto.Ano, motoDto.Kilometragem, 
+            motoDto.Cor, motoDto.Valor, motoDto.Cilindrada, motoDto.Partida );
+                Motos.Add(motoDto);
+                return Ok(Motos);
+            }
+            catch (System.Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
-        [HttpGet()]
+        
+        [HttpGet("GetMoto")]
         public IActionResult GetMotos()
         {
             return Ok(Motos);
         }
         [HttpDelete]
-        public IActionResult DeleteMoto(Moto moto)
+        public IActionResult DeleteMoto(MotoDTO motoDto)
         {
-            Motos.Remove(moto);
+            var index = Motos.Count<MotoDTO>();
+            Motos.RemoveAt(index -1);
             return Ok(Motos);
         }
 

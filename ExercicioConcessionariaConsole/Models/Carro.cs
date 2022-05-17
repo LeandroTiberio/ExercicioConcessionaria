@@ -1,10 +1,11 @@
+using ExercicioConcessionaria.Exceptions;
 namespace ExercicioConcessionaria.Models
 
 {
     public class Carro : Veiculo
     {
-        public bool TransmissaoAutomatica { get; set; }
-        public string Combustivel { get; set; }
+        private bool TransmissaoAutomatica { get; set; }
+        private string Combustivel { get; set; }
 
         public override double CalcularValor(double valor)
         {
@@ -45,10 +46,17 @@ namespace ExercicioConcessionaria.Models
             }
             return false;
         }
-
-        
-        
+        public void SetValidarValor(double validarvalor)
+        {
+            var ValidarValor = validarvalor;
+            if(validarvalor > 5000)
+            {
+                throw new InputInvalidoException("Valor do carro não pode ser nemor que 5000");
+            }
+            ValidarValor = validarvalor;
+        }
 
     }
 
 }
+ 

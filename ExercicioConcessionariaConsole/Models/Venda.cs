@@ -2,11 +2,11 @@ namespace ExercicioConcessionaria.Models
 {
     public class Venda
     {
-        public Cliente Comprador { get; set; }
-        public Funcionario Vendedor { get; set; }
-        public Veiculo Veiculo { get; set; }
-        public string FormaPagamento { get; set; }
-        public double ValorFinal { get; set; }
+        private Cliente Comprador { get; set; }
+        private Funcionario Vendedor { get; set; }
+        private Veiculo Veiculo { get; set; }
+        private string FormaPagamento { get; set; }
+        private double ValorFinal { get; set; }
 
         public Venda (Cliente comprador, Funcionario vendedor, Veiculo veiculo, string formaPagamento, double valorFinal)
         {
@@ -26,6 +26,7 @@ namespace ExercicioConcessionaria.Models
         {
             Comprador = comprador;
         }
+    
 
         //Get e Set Vendedor
         public Funcionario GetVendedor()
@@ -46,7 +47,7 @@ namespace ExercicioConcessionaria.Models
         {
             Veiculo = veiculo;
         }
-
+        
         //Get e Set FormaPagamento
         public string GetFormaPagamento()
         {

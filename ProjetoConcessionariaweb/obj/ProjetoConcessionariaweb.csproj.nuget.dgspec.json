@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Carla\\Desktop\\Curso\\ExercicioConcessionaria\\ProjetoConcessionariaweb\\ProjetoConcessionariaweb.csproj": {}
+    "C:\\Users\\Carla\\Desktop\\Curso\\ExercicioConcessionaria\\projetoconcessionariaweb\\ProjetoConcessionariaweb.csproj": {}
   },
   "projects": {
     "C:\\Users\\Carla\\Desktop\\Curso\\ExercicioConcessionaria\\ExercicioConcessionariaConsole\\ExercicioConcessionaria.csproj": {
@@ -56,14 +56,14 @@
         }
       }
     },
-    "C:\\Users\\Carla\\Desktop\\Curso\\ExercicioConcessionaria\\ProjetoConcessionariaweb\\ProjetoConcessionariaweb.csproj": {
+    "C:\\Users\\Carla\\Desktop\\Curso\\ExercicioConcessionaria\\projetoconcessionariaweb\\ProjetoConcessionariaweb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Carla\\Desktop\\Curso\\ExercicioConcessionaria\\ProjetoConcessionariaweb\\ProjetoConcessionariaweb.csproj",
+        "projectUniqueName": "C:\\Users\\Carla\\Desktop\\Curso\\ExercicioConcessionaria\\projetoconcessionariaweb\\ProjetoConcessionariaweb.csproj",
         "projectName": "ProjetoConcessionariaweb",
-        "projectPath": "C:\\Users\\Carla\\Desktop\\Curso\\ExercicioConcessionaria\\ProjetoConcessionariaweb\\ProjetoConcessionariaweb.csproj",
+        "projectPath": "C:\\Users\\Carla\\Desktop\\Curso\\ExercicioConcessionaria\\projetoconcessionariaweb\\ProjetoConcessionariaweb.csproj",
         "packagesPath": "C:\\Users\\Carla\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Carla\\Desktop\\Curso\\ExercicioConcessionaria\\ProjetoConcessionariaweb\\obj\\",
+        "outputPath": "C:\\Users\\Carla\\Desktop\\Curso\\ExercicioConcessionaria\\projetoconcessionariaweb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Carla\\AppData\\Roaming\\NuGet\\NuGet.Config"

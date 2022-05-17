@@ -1,10 +1,11 @@
 using System;
+using ExercicioConcessionaria.Exceptions;
 namespace ExercicioConcessionaria.Models
 {
     public class Moto : Veiculo
     {
-        public int Cilindrada { get; set; }
-        public string Partida { get; set; }
+        private int Cilindrada { get; set; }
+        private string Partida { get; set; }
 
         public override double CalcularValor(double valor)
         {
@@ -43,19 +44,29 @@ namespace ExercicioConcessionaria.Models
         }
         public void SetPartida(string partida)
         {
-            Partida = partida;
+            
             if (Partida == "Eletrica")
             {
-                return;
+                throw new Exception("Partida não pode ser manual");
             }
+            Partida = partida;
         }
-         public bool ValidarValorMoto(double valorfinal)
+        public bool ValidarValorMoto(double valorfinal)
         {
             if (valorfinal > 2000)
             {
                 return true;
             }
             return false;
+        }
+        public void SetValidarValor(int validarvalor)
+        {
+            var ValidarValor = validarvalor;
+            if(validarvalor  > 2000)
+            {
+                throw new InputInvalidoException("Valor do Moto não pode ser nemor que 2000");
+            }
+            ValidarValor = validarvalor;
         }
     }
 }

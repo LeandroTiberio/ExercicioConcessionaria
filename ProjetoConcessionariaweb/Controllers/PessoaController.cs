@@ -1,30 +1,40 @@
 using Microsoft.AspNetCore.Mvc;
 using ExercicioConcessionaria.Models;
+using ProjetoConcessionariaweb.DTOs;
 namespace ProjetoConcessionariaweb.Controllers
 {
     [ApiController]
     [Route("[controller]")]
     public class ConcessionariaController : ControllerBase
     {
-        public static List<Pessoa> PessoaDaClasse {get; set;} = new List<Pessoa>();
-        [HttpPost]
-        public IActionResult SetPessoaPadrao(Pessoa pessoa)
+        public static List<PessoaDTO> Pessoas {get; set;} = new List<PessoaDTO>();
+        [HttpPost("SetPessoa")]
+        public IActionResult SetPessoaPadrao(PessoaDTO pessoaDto)
         {
-            PessoaDaClasse.Add(pessoa);
-            return Ok(PessoaDaClasse);
+            try
+            {
+                var pessoa = new Pessoa(pessoaDto.Nome, pessoaDto.Cpf, pessoaDto.DataNascimento);
+                Pessoas.Add(pessoaDto);
+                return Ok(Pessoas);
+            }
+            catch (System.Exception ex)
+            {
+                return BadRequest (ex.Message);
+            }
+            
         }
 
-        [HttpGet()]
-        public IActionResult GetPessoaDaClasse()
+        [HttpGet("GetPessoa")]
+        public IActionResult GetPessoas()
         {
-            return Ok(PessoaDaClasse);
+            return Ok(Pessoas);
         }
         [HttpDelete]
-        public IActionResult DeletePessoaDaClasse(Pessoa Pessoa)
+        public IActionResult DeletePessoas()
         {
-            
-            PessoaDaClasse.Remove(Pessoa);
-            return Ok(PessoaDaClasse);
+            var index = Pessoas.Count<PessoaDTO>();
+            Pessoas.RemoveAt(index -1);
+            return Ok(Pessoas);
         }            
     }
 }

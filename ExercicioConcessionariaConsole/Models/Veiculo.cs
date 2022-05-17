@@ -4,12 +4,12 @@ namespace ExercicioConcessionaria.Models
 {
     public class Veiculo
     {
-        public string Marca { get; set; }
-        public string Modelo { get; set; }
-        public DateTime Ano { get; set; }
-        public int Kilometragem { get; set; }
-        public string Cor { get; set; }
-        public double Valor { get; set; }
+        private string Marca { get; set; }
+        private string Modelo { get; set; }
+        private DateTime Ano { get; set; }
+        private int Kilometragem { get; set; }
+        private string Cor { get; set; }
+        private double Valor { get; set; }
         public virtual double CalcularValor(double valor)
         {
             return valor;
@@ -41,6 +41,12 @@ namespace ExercicioConcessionaria.Models
         }
         public void SetModelo(string modelo)
         {
+            //Metodo de validação
+            
+            if(Modelo == "importado")
+            {
+                throw new Exception("Modelo invalido");
+            }
             Modelo = modelo;
         }
 
@@ -51,7 +57,8 @@ namespace ExercicioConcessionaria.Models
         }
         public void SetAno(DateTime ano)
         {
-           Ano = ano;
+            ValidarAno(ano);
+            Ano = ano;
         }
         public void SetAno(string ano)
         {
